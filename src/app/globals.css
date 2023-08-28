@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+a,
+button,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
 .select_bar {
   content: "";
   display: block;
