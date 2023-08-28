@@ -4,7 +4,7 @@ import { RxBackpack } from "react-icons/rx";
 import { RiContactsLine } from "react-icons/ri";
 const NavBarBottom = () => {
   return (
-    <nav className="fixed -z-10 w-noventaCinco bottom-2 left-0 right-0 shadow-md bg-veryDarkGray m-auto flex items-center justify-evenly h-14 rounded-full">
+    <nav className="fixed px-7 -z-10 w-noventaCinco bottom-2 left-0 right-0 shadow-md bg-veryDarkGray m-auto flex items-center justify-between h-14 rounded-full">
       <BiSolidFace className="text-whites w-7 h-7 " />
       <CgSmartphoneChip className="text-whites w-7 h-7 " />
       <RxBackpack className="text-whites w-7 h-7" />
