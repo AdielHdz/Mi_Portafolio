@@ -4,7 +4,7 @@ import { CgSmartphoneChip } from "react-icons/cg";
 import { RxBackpack } from "react-icons/rx";
 import Image from "next/image";
 import DealUp from "./assets/DealUp.png";
-import Go_trip from "./assets/Go-trip-logo.png";
+import Go_trip from "./assets/Go-Trip-logo.png";
 export default function Home() {
   return (
     <main className="grid gap-5 text-center p-3 dark:bg-blacks dark:text-whites">
