@@ -12,8 +12,8 @@ const NavBarTop = () => {
   };
 
   return (
-    <nav className="sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-blue_gray dark:bg-blacks dark:shadow-little_dark text-whites">
-      <h3 className="text-lg">{"{ AH }"}</h3>
+    <nav className="sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-cyan-500 dark:bg-blacks dark:shadow-mid text-whites">
+      <h3 className="text-3xl font-bold">{"{ AH }"}</h3>
       <label
         className="relative w-12 h-6  bg-whites peer-checked:bg-rose-400 rounded-full"
         htmlFor="theme"
