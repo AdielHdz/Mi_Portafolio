@@ -1,10 +1,11 @@
 import "./globals.css";
 import { TbFaceId } from "react-icons/tb";
-import { CgSmartphoneChip } from "react-icons/cg";
+
 import { RxBackpack } from "react-icons/rx";
 import Image from "next/image";
 import DealUp from "./assets/DealUp.png";
 import Go_trip from "./assets/Go-Trip-logo.png";
+import Technologies from "./components/Technologies/Technologies";
 export default function Home() {
   return (
     <main className="grid gap-5 text-center p-3 dark:bg-blacks dark:text-whites pb-20">
@@ -27,18 +28,7 @@ export default function Home() {
           aprendiendo de los demas y al mismo tiempo ayudando a mis compañeros.
         </p>
       </section>
-      <section id="tecnologias">
-        <h2 className="font-itim text-2xl flex items-center justify-center gap-1 py-2">
-          Tecnologías{" "}
-          <CgSmartphoneChip className="text-rose-500 dark:text-cyan-500  w-7 h-7" />
-        </h2>
-        <p className="text-lg">
-          Amante de la tecnologia, altamente motivado y disciplinado para crecer
-          como desarrollador web, estoy en costante aprendizaje de las
-          tecnologías más importantes y otras prometedoras, aprendiendo de los
-          demas y al mismo tiempo ayudando a mis compañeros.
-        </p>
-      </section>
+      <Technologies />
       <section className="grid gap-5" id="proyectos">
         <h2 className="font-itim text-2xl flex items-center justify-center gap-1 py-2">
           Proyectos{" "}
