@@ -12,10 +12,10 @@ const NavBarTop = () => {
   };
 
   return (
-    <nav className="sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-cyan-500 dark:bg-blacks dark:shadow-mid text-whites">
-      <h3 className="text-3xl font-bold">{"{ AH }"}</h3>
+    <nav className="sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-whites dark:bg-blacks dark:shadow-mid text-whites shadow-mid">
+      <h3 className="text-xl ">{"{ AH }"}</h3>
       <label
-        className="relative w-12 h-6  bg-whites peer-checked:bg-rose-400 rounded-full"
+        className="relative w-12 h-6 shadow-little_in  bg-whites dark:bg-blacks peer-checked:bg-rose-400 rounded-full dark:shadow-little_dark"
         htmlFor="theme"
       >
         <input
@@ -26,7 +26,7 @@ const NavBarTop = () => {
         />
         <div
           htmlFor="theme"
-          className="absolute shadow-little bg-gray-500 w-5 h-5 rounded-full top-0.5 left-0.5 transform transition-all duration-200 peer-checked:translate-x-6 peer-checked:bg-blacks"
+          className="absolute shadow-little bg-gray-600 w-5 h-5 rounded-full top-0.5 left-0.5 transform transition-all duration-200 peer-checked:translate-x-6 peer-checked:bg-whites"
         ></div>
       </label>
       {/*   <input type="checkbox" id="menu" className="hidden peer" />
