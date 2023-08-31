@@ -18,9 +18,9 @@ import { useState } from "react";
 
 const Technologies = () => {
   const [listView, setListView] = useState(false);
-  const [isMainVisible, setIsMainVisible] = useState(true);
+
   return (
-    <section id="tecnologias" className="grid gap-5">
+    <section id="tecnologias" className="grid gap-5 ">
       <h2 className="font-itim text-2xl flex items-center justify-center gap-1 py-2">
         Tecnologías
         <CgSmartphoneChip className="text-rose-500 dark:text-cyan-500  w-7 h-7" />
