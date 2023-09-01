@@ -20,18 +20,18 @@ const Technologies = () => {
   const [listView, setListView] = useState(false);
 
   return (
-    <section id="tecnologias" className="grid gap-5 ">
+    <section id="tecnologias" className="grid gap-5">
       <h2 className="font-itim text-2xl flex items-center justify-center gap-1 py-2">
         Tecnologías
         <CgSmartphoneChip className="text-rose-500 dark:text-cyan-500  w-7 h-7" />
       </h2>
       <TwoOptions listView={listView} setListView={setListView} />
 
-      <div className="relative grid overflow-hidden w-full shadow-mid_in py-4 rounded-lg">
+      <div className="relative grid overflow-hidden w-full shadow-mid_in  rounded-lg dark:border dark:border-white ">
         <div
           className={`${
             listView ? "-translate-x-full duration-500" : "   duration-500"
-          } flex flex-wrap gap-x-16 gap-y-12 justify-center transform transition-all  w-full px-2`}
+          } flex flex-wrap gap-x-16 gap-y-8 justify-center transform transition-all  w-full py-4 px-2 dark:bg-gray-50 `}
         >
           <Image
             src={HTML_logo}
@@ -67,7 +67,7 @@ const Technologies = () => {
             alt="javascript"
             width={500}
             height={500}
-            className=" w-16 object-contain "
+            className=" w-16 object-contain  "
           />
 
           <Image
@@ -96,7 +96,7 @@ const Technologies = () => {
             alt="tailwind"
             width={500}
             height={500}
-            className=" w-28"
+            className=" w-28 "
           />
           <Image
             src={EXPRESS_logo}
@@ -110,14 +110,14 @@ const Technologies = () => {
             alt="sequelize"
             width={500}
             height={500}
-            className=" w-24"
+            className=" w-28"
           />
           <Image
             src={POSTGRESQL_logo}
             alt="postgresql"
             width={500}
             height={500}
-            className=" w-24"
+            className=" w-24 object-contain"
           />
         </div>
         <div
