@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import { TbFaceId } from "react-icons/tb";
 import { BsBoxArrowUpRight } from "react-icons/bs";
@@ -9,8 +10,38 @@ import Go_trip from "./assets/Go-Trip-logo.png";
 import Technologies from "./components/Technologies/Technologies";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { SiMinutemailer } from "react-icons/si";
 import { BsFillInfoSquareFill } from "react-icons/bs";
+import { useState } from "react";
+
+const postTouchHandler = async (touchData) => {
+  console.log(touchData);
+  await fetch("http://localhost:3001/touch", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(touchData),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+};
 export default function Home() {
+  const [touchData, setTouchData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    overview: "",
+  });
+
+  const formDataHandler = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setTouchData({ ...touchData, [name]: value });
+    console.log({ ...touchData, [name]: value });
+  };
+
   return (
     <main className="grid gap-5 text-center p-3 dark:bg-slate-950 dark:text-whites pb-20">
       <section>
@@ -22,7 +53,7 @@ export default function Home() {
 
       <section
         id="quiensoy"
-        className=" bg-slate-100 dark:bg-gray-700 rounded-md p-2"
+        className=" bg-slate-100 dark:bg-gray-800 rounded-md p-2"
       >
         <h2 className="font-itim text-2xl flex items-center justify-center gap-1 pb-2">
           ¿Quien soy?
@@ -37,7 +68,7 @@ export default function Home() {
       </section>
       <Technologies />
       <section
-        className="grid gap-5 bg-slate-100 rounded-md p-2 dark:bg-gray-700 dark:text-whites  text-gray-600"
+        className="grid gap-5 bg-slate-100 rounded-md p-2 py-5 dark:bg-gray-800 dark:text-whites  text-gray-600"
         id="proyectos"
       >
         <h2 className="font-itim text-2xl flex items-center justify-center gap-1 pb-2">
@@ -74,7 +105,7 @@ export default function Home() {
             src={Go_trip}
             width={100}
             height={100}
-            alt=""
+            alt="go trip"
             className="w-30 m-auto my-3"
           />
           <p className="text-lg ">
@@ -136,8 +167,10 @@ export default function Home() {
                 Tu nombre
               </label>
               <input
+                onChange={formDataHandler}
+                value={touchData.name}
                 type="text"
-                name="nombre"
+                name="name"
                 className="h-12 rounded-md border-2 dark:bg-gray-700 border-gray-500 outline-rose-500 dark:outline-none dark:border-cyan-500 px-2 font-itim"
               />
             </div>
@@ -146,8 +179,10 @@ export default function Home() {
                 Telefono
               </label>
               <input
+                onChange={formDataHandler}
+                value={touchData.phone}
                 type="text"
-                name="telefono"
+                name="phone"
                 placeholder="Opcional"
                 className="h-12 rounded-md border-2 dark:bg-gray-700 border-gray-500 outline-rose-500 dark:outline-none dark:border-cyan-500 px-2 font-itim "
               />
@@ -155,12 +190,14 @@ export default function Home() {
 
             <div className="flex flex-col">
               <label className=" font-semibold flex items-center justify-between tracking-wider">
-                Correo{" "}
+                Correo
                 <BsFillInfoSquareFill className="text-cyan-700 w-5 h-5 dark:text-cyan-500" />
               </label>
               <input
+                onChange={formDataHandler}
+                value={touchData.email}
                 type="email"
-                name="correo"
+                name="email"
                 className="h-12 rounded-md border-2 dark:bg-gray-700 border-gray-500 outline-rose-500 dark:outline-none dark:border-cyan-500 px-2 font-itim"
               />
             </div>
@@ -170,10 +207,18 @@ export default function Home() {
                 <BsFillInfoSquareFill className="text-cyan-700 w-5 h-5 dark:text-cyan-500" />
               </label>
               <textarea
-                name="descripcion"
-                className="h-12 rounded-md border-2 dark:bg-gray-700 border-gray-500 outline-rose-500 dark:outline-none dark:border-cyan-500  px-2 font-itim"
+                onChange={formDataHandler}
+                value={touchData.overview}
+                name="overview"
+                className="h-12 rounded-md border-2 dark:bg-gray-700 border-gray-500 outline-rose-500 dark:outline-none dark:border-cyan-500  px-2 py-1 font-itim"
               />
             </div>
+            <button
+              onClick={() => postTouchHandler(touchData)}
+              className="bg-rose-500 text-whites h-12 text-lg flex justify-center items-center gap-2 rounded-md"
+            >
+              Contactar <SiMinutemailer className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </section>
