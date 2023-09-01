@@ -14,8 +14,8 @@ const TwoOptions = ({ listView, setListView }) => {
         onClick={() => setListView(false)}
         className={`${
           !listView
-            ? "font-semibold text-[#2E3840]"
-            : " font-normal text-gray-500"
+            ? "font-semibold text-[#2E3840] dark:text-whites"
+            : " font-normal text-gray-500 dark:text-gray-100"
         } transform transition-all duration-200 `}
       >
         Vista gráfica
@@ -25,8 +25,8 @@ const TwoOptions = ({ listView, setListView }) => {
         htmlFor="list"
         className={`${
           listView
-            ? "font-semibold text-[#2E3840]"
-            : " font-normal text-gray-500"
+            ? "font-semibold text-[#2E3840 dark:text-whites"
+            : " font-normal text-gray-500 dark:text-gray-100"
         } transform transition-all duration-200`}
       >
         Vista de lista

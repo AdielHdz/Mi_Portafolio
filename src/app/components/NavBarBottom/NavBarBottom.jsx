@@ -7,7 +7,7 @@ import { useState } from "react";
 const NavBarBottom = () => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <nav className="fixed px-7 z-0 w-noventaCinco bottom-2 left-0 right-0 shadow-mid dark:shadow-mid_white bg-whites text-cyan-500 dark:bg-blacks m-auto flex items-center justify-between h-14 rounded-full dark:text-whites">
+    <nav className="fixed px-7 z-0 w-noventaCinco bottom-2 left-0 right-0 shadow-mid dark:shadow-mid_white bg-whites text-cyan-500 dark:bg-blacks dark:bg-opacity-80 m-auto flex items-center justify-between h-14 rounded-full dark:text-whites">
       <a
         href="#quiensoy"
         className={`transform transition-all duration-100 ${
