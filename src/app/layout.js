@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className=" font-jaldi ">
+      <body className=" font-jaldi dark:bg-slate-950">
         <NavBarTop />
         {children}
         <NavBarBottom />
