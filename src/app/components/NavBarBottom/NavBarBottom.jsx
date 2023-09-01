@@ -9,7 +9,7 @@ const NavBarBottom = ({ isNavsHidden }) => {
   return (
     <nav
       className={`${
-        isNavsHidden ? " translate-y-full -bottom-2" : " opacity-100"
+        isNavsHidden ? " translate-y-full -bottom-1" : " opacity-100"
       } transform transition duration-300 fixed px-7 z-0 w-noventaCinco bottom-2 left-0 right-0 shadow-mid dark:shadow-mid_white bg-whites text-gray-700 dark:bg-blacks dark:bg-opacity-80 m-auto flex items-center justify-between h-14 rounded-full dark:text-whites`}
     >
       <a
