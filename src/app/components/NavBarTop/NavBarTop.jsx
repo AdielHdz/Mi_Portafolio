@@ -15,7 +15,7 @@ const NavBarTop = ({ isNavsHidden }) => {
     <nav
       className={`${
         isNavsHidden ? "-translate-y-full" : " opacity-100"
-      } transform transition-transform duration-200  sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-whites dark:bg-blacks dark:bg-opacity-80 dark:shadow-mid text-whites shadow-mid`}
+      } transform transition-transform duration-200  sticky z-20 top-0 h-16 flex items-center justify-between p-3 bg-whites dark:bg-gray-900  dark:shadow-mid text-whites shadow-mid`}
     >
       <h3 className="text-xl ">{"{ AH }"}</h3>
       <label
@@ -30,7 +30,7 @@ const NavBarTop = ({ isNavsHidden }) => {
         />
         <div
           htmlFor="theme"
-          className="absolute shadow-little bg-gray-600 w-5 h-5 rounded-full top-0.5 left-0.5 transform transition-all duration-200 peer-checked:translate-x-6 peer-checked:bg-whites"
+          className="absolute bg-gray-600 w-5 h-5 rounded-full top-0.5 left-0.5 transform transition-all duration-200 peer-checked:translate-x-6 peer-checked:bg-whites"
         ></div>
       </label>
       {/*   <input type="checkbox" id="menu" className="hidden peer" />

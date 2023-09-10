@@ -27,7 +27,7 @@ const Technologies = () => {
       </h2>
       <TwoOptions listView={listView} setListView={setListView} />
 
-      <div className="relative grid overflow-hidden w-full shadow-mid_in  rounded-lg dark:border dark:border-white ">
+      <div className="relative grid overflow-hidden w-full border-2 border-gray-300  rounded-lg dark:border-white ">
         <div
           className={`${
             listView ? "-translate-x-full duration-500" : "   duration-500"
