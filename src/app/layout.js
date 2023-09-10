@@ -9,10 +9,11 @@ const jaldi = Jaldi({
 });
 import NavBarTop from "./components/NavBarTop/NavBarTop";
 import { useEffect, useRef, useState } from "react";
-
+import { usePathname, userPathname } from "next/navigation";
 export default function RootLayout({ children }) {
   const lastScrollPosition = useRef(0);
   const [isNavsHidden, setNavIsHidden] = useState(false);
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,11 +45,11 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Description" />
       </head>
       <body className=" font-jaldi dark:bg-slate-950">
-        <NavBarTop isNavsHidden={isNavsHidden} />
+        {pathName !== "/munia" && <NavBarTop isNavsHidden={isNavsHidden} />}
 
         {children}
 
-        <NavBarBottom isNavsHidden={isNavsHidden} />
+        {pathName !== "/munia" && <NavBarBottom isNavsHidden={isNavsHidden} />}
       </body>
     </html>
   );
