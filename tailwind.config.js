@@ -31,8 +31,8 @@ module.exports = {
       },
       boxShadow: {
         little: "0 0 2px 1px rgba(0,0,0,0.5)",
-        little_dark: "0 0 2px 1px rgba(255,255,255,0.5)",
-        little_in: "inset 0 0 5px 1px rgba(0,0,0,0.2)",
+        little_dark: "0 0 1px 2px rgba(255,255,255,0.1)",
+        little_in: "inset 0 0 10px 0px rgba(0,0,0,0.1)",
         mid_in: "inset 0 0 10px 1px rgba(0,0,0,0.3)",
         mid_in_blue: "inset 0 0 10px 1px rgba(0,0,0,0.8)",
         mid: "0 0 10px 0px rgba(0,0,0,0.3)",
