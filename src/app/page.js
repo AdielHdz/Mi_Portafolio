@@ -45,8 +45,10 @@ export default function Home() {
   return (
     <main className="grid gap-5 text-center p-3 dark:bg-slate-950 dark:text-whites pb-20">
       <section>
-        <h1 className=" font-itim text-4xl   ">Adiel Hernández</h1>
-        <h3 className="m-auto w-max border-b text-lg border-b-veryDarkGray text-blue_gray dark:text-rose-500 ">
+        <h1 className=" font-jaldi font-bold text-5xl py-10">
+          Adiel Hernández
+        </h1>
+        <h3 className="m-auto w-max border-b text-xl  border-b-veryDarkGray text-blue_gray dark:text-rose-500 ">
           Desarrollador Web Full Stack
         </h3>
       </section>
